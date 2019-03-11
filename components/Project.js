@@ -1,11 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const Container = styled.div`
-   border: solid 4px #fff;
+   margin: 0.2em;
+   border: solid 2px #fff;
    position: relative;
-   width: 300px;
+   width: 250px;
    height: 200px;
+
+   background: url("${ props => props.imgSrc }") center / cover no-repeat;
 `;
 
 const DescriptionContainer = styled.div`
@@ -26,33 +29,71 @@ const ProjectTitle = styled.h4`
    margin: 0.5em;
 `;
 
+const fadeIn = keyframes`
+   from{
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+`;
+
+const fadeOut = keyframes`
+   from{
+      opacity: 1;
+   }
+   to {
+      opacity: 0;
+   }
+`;
+
 const Description = styled.div`
-   opacity: 0;
    padding: 0.5em;
-   transition: opacity 0.4s ease;
+   animation: ${fadeOut} 0.2s ease;
 
    ${Container}:hover & {
-      opacity: 1;
+      animation: ${fadeIn} 0.4s linear;
    }
 
 `;
 
-export default function Project(props){
-   let showingDescription = false;
-   function handleTransition(e){
-      console.log('ping');
-      showingDescription = true;
+class Project extends React.Component{
+   constructor(props){
+      super(props);
+
+      this.state = { showDescription: false, fadingIn: false, fadingOut: false };
+
+      this.handleAnimEnd = this.handleAnimEnd.bind(this);
+      this.startFadeIn = this.startFadeIn.bind(this);
+      this.startFadeOut = this.startFadeOut.bind(this);
    }
 
-   return (
-      <Container>
-         <img src={props.imgSrc} width="300" height="200" />
-         <DescriptionContainer onTransitionEnd={handleTransition}>
-            <ProjectTitle>{props.title}</ProjectTitle>
-            <Description showing={showingDescription}>
-               {props.children}
-            </Description>
-         </DescriptionContainer>         
-      </Container>
-   );
+   startFadeIn(e){
+      this.setState({ showDescription: true, fadingOut: false });
+   }
+
+   startFadeOut(e){
+      this.setState({ fadingOut: true });
+   }
+
+   handleAnimEnd(e){
+      if ( this.state.showDescription && this.state.fadingOut ){
+         this.setState({ showDescription: false, fadingOut: false });         
+      }
+   }
+
+   render(){
+      return (
+         <Container onMouseEnter={ this.startFadeIn } onMouseLeave={ this.startFadeOut } imgSrc={this.props.imgSrc}>
+            <DescriptionContainer>
+               <ProjectTitle>{this.props.title}</ProjectTitle>
+               <Description onAnimationEnd={this.handleAnimEnd} style={{ display: this.state.showDescription ? 'block' : 'none'}} >
+                  {this.props.children}
+               </Description>
+            </DescriptionContainer>         
+         </Container>
+      );
+   }
 }
+
+export default Project;
