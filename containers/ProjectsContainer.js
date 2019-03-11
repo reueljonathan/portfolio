@@ -1,9 +1,9 @@
 import React from 'react';
 import Paragraph from '../styled/Paragraph';
-import HeaderWithIcon from './HeaderWithIcon';
+import HeaderWithIcon from '../components/HeaderWithIcon';
 import CodeIcon from '../svg/code.svg';
 
-export default function Projects(props){
+export default function ProjectsContainer(props){
    return (
       <React.Fragment>
          <HeaderWithIcon id={props.id}

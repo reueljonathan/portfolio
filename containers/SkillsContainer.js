@@ -1,15 +1,15 @@
 import React from 'react';
 import Paragraph from '../styled/Paragraph';
-import HeaderWithIcon from './HeaderWithIcon';
+import HeaderWithIcon from '../components/HeaderWithIcon';
 import SpannerIcon from '../svg/spanner.svg';
-import SkillList from './SkillList';
-import Skill from './Skill';
-import Legend from './Legend';
-import SkillLegend from './SkillLegend';
+import SkillList from '../components/SkillList';
+import Skill from '../components/Skill';
+import Legend from '../components/Legend';
+import SkillLegend from '../components/SkillLegend';
 import SKILL_LEVEL from '../constants/SkillLevel';
 import FlexContainer from '../styled/FlexContainer';
 
-export default function Skills(props){
+export default function SkillsContainer(props){
    return (
       <React.Fragment>
          <HeaderWithIcon id={props.id}

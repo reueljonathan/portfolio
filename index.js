@@ -5,9 +5,9 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import profileImage from './img/profile-2019.png';
 
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
+import AboutContainer from './containers/AboutContainer';
+import ProjectsContainer from './containers/ProjectsContainer';
+import SkillsContainer from './containers/SkillsContainer';
 
 import LanguagesContainer from './containers/LanguagesContainer';
 import SocialContainer from './containers/SocialContainer';
@@ -27,6 +27,8 @@ const links = [
    { href:'#about', text:'About' },
    { href:'#projects', text:'Projects' },
    { href:'#skills', text:'Skills' },
+   { href:'#languages', text:'Languages' },
+   { href:'#social', text:'Social' },
 ];
 
 function App(props){
@@ -36,9 +38,9 @@ function App(props){
             <Header imgSource={profileImage} />
             <Navbar links={links} />
 
-            <About id="about" width='24' height='24'/>
-            <Projects id="projects" />
-            <Skills id="skills" />
+            <AboutContainer id="about" />
+            <ProjectsContainer id="projects" />
+            <SkillsContainer id="skills" />
             <LanguagesContainer id="languages" />
             <SocialContainer id="social" />
          </Root>

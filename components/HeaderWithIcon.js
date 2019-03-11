@@ -15,7 +15,7 @@ const Icon = styled(SVG)`
 
 export default function HeaderWithIcon(props){
    return(
-      <FlexHeader>
+      <FlexHeader id={props.id}>
          <Icon width={props.width} height={props.height}>
             <use href={props.iconHref}
                width={props.width}
