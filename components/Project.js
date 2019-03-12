@@ -2,26 +2,27 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const Container = styled.div`
-   margin: 0.2em;
-   border: solid 2px #fff;
    position: relative;
-   width: 250px;
+   width: 50%;
+   min-width: 300px;
    height: 200px;
+   box-sizing: border-box;
 
    background: url("${ props => props.imgSrc }") center / cover no-repeat;
 `;
 
 const DescriptionContainer = styled.div`
    position: absolute;
-   bottom: 0;
-   background-color: rgba(0,0,0,0.8);
+   top: 0;
+   background-color: rgba(0,0,0,0.4);
    width: 100%;
    height: 2.3em;
 
-   transition: height 0.4s ease;
+   transition: height 0.2s ease, background-color 0.2s ease;
 
    ${Container}:hover & {
       height: 100%;
+      background-color: rgba(0,0,0,0.8);
    }
 `;
 
