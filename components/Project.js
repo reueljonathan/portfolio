@@ -9,6 +9,10 @@ const Container = styled.div`
    box-sizing: border-box;
 
    background: url("${ props => props.imgSrc }") center / cover no-repeat;
+
+   @media (max-width: 650px) {
+      width: 100%;
+   }
 `;
 
 const DescriptionContainer = styled.div`

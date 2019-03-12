@@ -22,26 +22,27 @@ export default function SkillsContainer(props){
 
          <FlexContainer>
             <SkillList>
+               <Skill name="Redux" level={SKILL_LEVEL.LOW}/>
+               <Skill name="TypeScript" level={SKILL_LEVEL.LOW}/>
                <Skill name="Python" level={SKILL_LEVEL.LOW}/>
-               <Skill name="Javascript" level={SKILL_LEVEL.HIGH}/>
-               <Skill name="Java" level={SKILL_LEVEL.HIGH}/>
-               <Skill name="Lua" level={SKILL_LEVEL.HIGH}/>
-               <Skill name="C" level={SKILL_LEVEL.MEDIUM} />
+               <Skill name="MongoDB" level={SKILL_LEVEL.LOW} />
             </SkillList>
             <SkillList>
                <Skill name="React" level={SKILL_LEVEL.MEDIUM}/>
-               <Skill name="AngularJS" level={SKILL_LEVEL.HIGH}/>
-               <Skill name="Redux" level={SKILL_LEVEL.LOW}/>
-               <Skill name="TypeScript" level={SKILL_LEVEL.LOW}/>
-               <Skill name="Bootstrap" level={SKILL_LEVEL.HIGH} />
-               <Skill name="D3.js" level={SKILL_LEVEL.HIGH} />
-            </SkillList>
-            <SkillList>
+               <Skill name="Styled Components" level={SKILL_LEVEL.MEDIUM} />
                <Skill name="Express" level={SKILL_LEVEL.MEDIUM}/>
                <Skill name="GraphQL" level={SKILL_LEVEL.MEDIUM}/>
-               <Skill name="MongoDB" level={SKILL_LEVEL.LOW} />
-               <Skill name="MySQL" level={SKILL_LEVEL.HIGH} />
                <Skill name="Oracle" level={SKILL_LEVEL.MEDIUM} />
+               <Skill name="C" level={SKILL_LEVEL.MEDIUM} />
+            </SkillList>
+            <SkillList>
+               <Skill name="AngularJS" level={SKILL_LEVEL.HIGH}/>
+               <Skill name="Bootstrap" level={SKILL_LEVEL.HIGH} />
+               <Skill name="D3.js" level={SKILL_LEVEL.HIGH} />
+               <Skill name="MySQL" level={SKILL_LEVEL.HIGH} />
+               <Skill name="Javascript" level={SKILL_LEVEL.HIGH}/>
+               <Skill name="Java" level={SKILL_LEVEL.HIGH}/>
+               <Skill name="Lua" level={SKILL_LEVEL.HIGH}/>
             </SkillList>
          </FlexContainer>
 
