@@ -11,6 +11,8 @@ const FlexHeader = styled(Header1)`
 
 const Icon = styled(SVG)`
    margin-right: 0.2em;
+   position: relative;
+   bottom: 2px;
 `;
 
 export default function HeaderWithIcon(props){

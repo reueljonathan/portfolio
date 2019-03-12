@@ -4,7 +4,7 @@ const theme = {
       primary: '#0197f6',
       secondary: '#fff',
    },
-   fontFamily: 'Thasadith',
+   fontFamily: 'Catamaran',
    h1: {
       fontSize: '1.4em'
    },
