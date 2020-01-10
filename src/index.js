@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
 import Header from './components/Header';
-import Navbar from './components/Navbar';
 import profileImage from './img/profile-2019.png';
 
 import AboutContainer from './containers/AboutContainer';
@@ -19,33 +23,31 @@ import theme from './styled/theme';
 
 const Root = styled.div`
    background-color: ${props => props.theme.backgroundColor};
-   color: ${props => props.theme.colors.secondary}
+   color: ${props => props.theme.colors.primary}
    font-family: ${props => props.theme.fontFamily}
 `;
 
-const links = [
-   { href:'#about', text:'About' },
-   { href:'#projects', text:'Projects' },
-   { href:'#skills', text:'Skills' },
-   { href:'#languages', text:'Languages' },
-   { href:'#social', text:'Social' },
-];
-
 function App(props){
-   return (
-      <ThemeProvider theme={theme}>
-         <Root>
-            <Header imgSource={profileImage} />
-            <Navbar links={links} />
-
-            <AboutContainer id="about" />
-            <ProjectsContainer id="projects" />
-            <SkillsContainer id="skills" />
-            <LanguagesContainer id="languages" />
-            <SocialContainer id="social" />
-         </Root>
-      </ThemeProvider>
-   );
+  return (
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Root>
+          <Header imgSource={profileImage} />
+          <Switch>
+            <Route path="/about">
+              <AboutContainer id="about" />
+            </Route>
+            <Route path="/projects">
+              <ProjectsContainer id="projects" />
+            </Route>
+            <Route path="/tools">
+              <SkillsContainer id="skills" />
+            </Route>
+          </Switch>
+        </Root>
+      </Router>
+    </ThemeProvider>
+  );
 }
 
 ReactDOM.render( <App />, document.getElementById('root') );

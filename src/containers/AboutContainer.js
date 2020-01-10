@@ -1,13 +1,11 @@
 import React from 'react';
 import Paragraph from '../styled/Paragraph';
 import HeaderWithIcon from '../components/HeaderWithIcon';
-import UserIcon from '../svg/user.svg';
 
 export default function AboutContainer(props){
    return (
       <React.Fragment>
-         <HeaderWithIcon id={props.id} width='24' height='24' 
-            iconHref={`${UserIcon}#user`}>
+         <HeaderWithIcon id={props.id} width='24' height='24'>
             About
          </HeaderWithIcon>
          <Paragraph>

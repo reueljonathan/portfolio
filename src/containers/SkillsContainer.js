@@ -1,7 +1,6 @@
 import React from 'react';
 import Paragraph from '../styled/Paragraph';
 import HeaderWithIcon from '../components/HeaderWithIcon';
-import SpannerIcon from '../svg/spanner.svg';
 import SkillList from '../components/SkillList';
 import Skill from '../components/Skill';
 import Legend from '../components/Legend';
@@ -15,7 +14,7 @@ export default function SkillsContainer(props){
          <HeaderWithIcon id={props.id}
             width='24'
             height='24'
-            iconHref={`${SpannerIcon}#spanner`}>
+         >
             Skills
          </HeaderWithIcon>
          <Paragraph> Some tools and technologies that I already used.</Paragraph>

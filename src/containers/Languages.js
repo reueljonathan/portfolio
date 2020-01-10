@@ -1,11 +1,10 @@
 import React from 'react';
 import HeaderWithIcon from '../components/HeaderWithIcon';
-import WorldIcon from '../svg/world.svg';
 
 import SkillList from '../components/SkillList';
 import Skill from '../components/Skill';
 import Legend from '../components/Legend';
-import SkillLegend from '../components/SkillLegend';
+import SkillLegend from './SkillLegend';
 import SKILL_LEVEL from '../constants/SkillLevel';
 
 export default function LanguagesContainer(props){
@@ -14,7 +13,7 @@ export default function LanguagesContainer(props){
          <HeaderWithIcon id={props.id}
             width='24'
             height='24'
-            iconHref={`${WorldIcon}#world`}>
+         >
             Languages
          </HeaderWithIcon>
 

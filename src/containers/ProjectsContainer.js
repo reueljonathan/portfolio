@@ -4,10 +4,8 @@ import FlexWrapContainer from '../styled/FlexWrapContainer';
 import BlockLink from '../styled/BlockLink';
 import HeaderWithIcon from '../components/HeaderWithIcon';
 import Project from '../components/Project';
-import CodeIcon from '../svg/code.svg';
 
 import FunctionsImg from '../img/projects/functions.png';
-import PortfolioImg from '../img/projects/portfolio.png';
 import TMGImg from '../img/projects/tmg.png';
 
 export default function ProjectsContainer(props){
@@ -16,17 +14,10 @@ export default function ProjectsContainer(props){
          <HeaderWithIcon id={props.id}
             width='24'
             height='24'
-            iconHref={`${CodeIcon}#code`}>
+           iconHref={`${'../svg/code.svg'}#code`}>
             Projects
          </HeaderWithIcon>
          <FlexWrapContainer>
-            <Project imgSrc={PortfolioImg} title="Portfolio">
-               <Paragraph>
-                  A little of inception doesn't hurts, right?
-                  This portfolio was made with ReactJS, styled-components v4, and Typicons.
-               </Paragraph>
-               <BlockLink target="_blank" href="https://github.com/reueljonathan/portfolio">Source</BlockLink>
-            </Project>
             <Project imgSrc={FunctionsImg} title="Functions Game">
                <Paragraph>
                   A physics based game prototype that use mathematical functions as controls.

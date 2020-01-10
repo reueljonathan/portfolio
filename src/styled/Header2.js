@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Header2 = styled.h2`
    margin: 0;
+   font-weight: normal;
    font-size: ${props => props.theme.h2.fontSize}
    color: ${props => props.theme.colors.primary}
 `;
