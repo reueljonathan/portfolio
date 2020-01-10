@@ -4,7 +4,7 @@ const theme = {
       primary: '#1c1c1c',
       secondary: '#0055d4',
    },
-   fontFamily: "Ubuntu, 'sans-serif'",
+   fontFamily: "RedHatDisplay, Ubuntu, 'sans-serif'",
    h1: {
       fontSize: '2.5em'
    },

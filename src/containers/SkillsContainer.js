@@ -1,6 +1,6 @@
 import React from 'react';
 import Paragraph from '../styled/Paragraph';
-import HeaderWithIcon from '../components/HeaderWithIcon';
+import HeaderContent from '../styled/HeaderContent';
 import SkillList from '../components/SkillList';
 import Skill from '../components/Skill';
 import Legend from '../components/Legend';
@@ -11,12 +11,9 @@ import FlexContainer from '../styled/FlexContainer';
 export default function SkillsContainer(props){
    return (
       <React.Fragment>
-         <HeaderWithIcon id={props.id}
-            width='24'
-            height='24'
-         >
+         <HeaderContent>
             Skills
-         </HeaderWithIcon>
+         </HeaderContent>
          <Paragraph> Some tools and technologies that I already used.</Paragraph>
 
          <FlexContainer>

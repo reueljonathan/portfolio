@@ -21,10 +21,26 @@ import styled from 'styled-components';
 
 import theme from './styled/theme';
 
+import sizes from './responsive/sizes';
+
 const Root = styled.div`
    background-color: ${props => props.theme.backgroundColor};
-   color: ${props => props.theme.colors.primary}
-   font-family: ${props => props.theme.fontFamily}
+   color: ${props => props.theme.colors.primary};
+   font-family: ${props => props.theme.fontFamily};
+
+  @media (max-width: ${sizes.tablet}) {
+    width: 100%; 
+  }
+
+   width: 1238px;
+`;
+
+const ContentContainer = styled.div`
+  margin-left: 192px;
+
+  @media (max-width: ${sizes.tablet}){
+    margin-left: 0;
+  }
 `;
 
 function App(props){
@@ -33,17 +49,19 @@ function App(props){
       <Router>
         <Root>
           <Header imgSource={profileImage} />
-          <Switch>
-            <Route path="/about">
-              <AboutContainer id="about" />
-            </Route>
-            <Route path="/projects">
-              <ProjectsContainer id="projects" />
-            </Route>
-            <Route path="/tools">
-              <SkillsContainer id="skills" />
-            </Route>
-          </Switch>
+          <ContentContainer>
+            <Switch>
+              <Route path="/about">
+                <AboutContainer id="about" />
+              </Route>
+              <Route path="/projects">
+                <ProjectsContainer id="projects" />
+              </Route>
+              <Route path="/tools">
+                <SkillsContainer id="skills" />
+              </Route>
+            </Switch>
+          </ContentContainer>
         </Root>
       </Router>
     </ThemeProvider>

@@ -2,7 +2,7 @@ import React from 'react';
 import Paragraph from '../styled/Paragraph';
 import FlexWrapContainer from '../styled/FlexWrapContainer';
 import BlockLink from '../styled/BlockLink';
-import HeaderWithIcon from '../components/HeaderWithIcon';
+import HeaderContent from '../styled/HeaderContent';
 import Project from '../components/Project';
 
 import FunctionsImg from '../img/projects/functions.png';
@@ -11,12 +11,9 @@ import TMGImg from '../img/projects/tmg.png';
 export default function ProjectsContainer(props){
    return (
       <React.Fragment>
-         <HeaderWithIcon id={props.id}
-            width='24'
-            height='24'
-           iconHref={`${'../svg/code.svg'}#code`}>
+        <HeaderContent>
             Projects
-         </HeaderWithIcon>
+         </HeaderContent>
          <FlexWrapContainer>
             <Project imgSrc={FunctionsImg} title="Functions Game">
                <Paragraph>
@@ -35,7 +32,6 @@ export default function ProjectsContainer(props){
                <BlockLink target="_blank" href="https://reueljonathan.github.io/that-memory-game/">Demo</BlockLink>
             </Project>
          </FlexWrapContainer>
-         <Paragraph>More projects soon.</Paragraph>
       </React.Fragment>
    );
 }

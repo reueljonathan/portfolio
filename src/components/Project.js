@@ -7,6 +7,7 @@ const Container = styled.div`
    min-width: 300px;
    height: 250px;
    box-sizing: border-box;
+   color: #ffffff;
 
    background: url("${ props => props.imgSrc }") center / cover no-repeat;
 

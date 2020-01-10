@@ -1,13 +1,13 @@
 import React from 'react';
 import Paragraph from '../styled/Paragraph';
-import HeaderWithIcon from '../components/HeaderWithIcon';
+import HeaderContent from '../styled/HeaderContent';
 
 export default function AboutContainer(props){
    return (
       <React.Fragment>
-         <HeaderWithIcon id={props.id} width='24' height='24'>
+         <HeaderContent>
             About
-         </HeaderWithIcon>
+         </HeaderContent>
          <Paragraph>
             I started my career in 2013 with 17 years old, working at C.E.S.A.R (Recife, Brazil) as an apprentice developer.
             There I worked on different projects, with the most variated technologies. ASP.Net MVC, Java, Lua, Javascript, AngularJS...
