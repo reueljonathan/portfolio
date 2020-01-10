@@ -24,6 +24,10 @@ const NavList = styled.ul`
 const NavItem = styled.li`
    display: inline-block;
    margin: 0 1em;
+
+  @media (max-width: ${sizes.mobileL}) {
+    margin: 0 0.5em;
+  }
 `;
 
 const CustomNavLink = styled(NavLink)`
@@ -62,6 +66,10 @@ const CustomNavLink = styled(NavLink)`
     width: 100%;
     left: 0;
    }
+
+  @media (max-width: ${sizes.mobileL}) {
+    font-size: 1em;
+  }
 `;
 
 export default function Navbar(props){
@@ -69,7 +77,7 @@ export default function Navbar(props){
     <Nav>
       <NavList>
             { props.links.map( link => 
-               <NavItem>
+               <NavItem key={link.text}>
                  <CustomNavLink
                    activeClassName='active'
                    to={link.href}

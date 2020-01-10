@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -24,15 +25,21 @@ import theme from './styled/theme';
 import sizes from './responsive/sizes';
 
 const Root = styled.div`
-   background-color: ${props => props.theme.backgroundColor};
-   color: ${props => props.theme.colors.primary};
-   font-family: ${props => props.theme.fontFamily};
+  background-color: ${props => props.theme.backgroundColor};
+  color: ${props => props.theme.colors.primary};
+  font-family: ${props => props.theme.fontFamily};
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32px 64px;
 
   @media (max-width: ${sizes.tablet}) {
-    width: 100%; 
+    padding: 32px;
   }
 
-   width: 1238px;
+  @media (max-width: ${sizes.mobileS}) {
+    padding: 32px 16px;
+  }
 `;
 
 const ContentContainer = styled.div`
@@ -60,6 +67,7 @@ function App(props){
               <Route path="/tools">
                 <SkillsContainer id="skills" />
               </Route>
+              <Redirect from="/" to="/about" />
             </Switch>
           </ContentContainer>
         </Root>
