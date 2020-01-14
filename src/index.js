@@ -30,6 +30,7 @@ const Root = styled.div`
   font-family: ${props => props.theme.fontFamily};
 
   width: 100%;
+  max-width: 2000px;
   box-sizing: border-box;
   padding: 32px 64px;
 
@@ -43,7 +44,9 @@ const Root = styled.div`
 `;
 
 const ContentContainer = styled.div`
-  margin-left: 192px;
+  @media (min-width: ${sizes.tablet}) {
+    margin-left: calc(128px + 2em);
+  }
 
   @media (max-width: ${sizes.tablet}){
     margin-left: 0;
@@ -67,7 +70,6 @@ function App(props){
               <Route path="/tools">
                 <SkillsContainer id="skills" />
               </Route>
-              <Redirect from="/" to="/about" />
             </Switch>
           </ContentContainer>
         </Root>

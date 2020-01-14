@@ -8,10 +8,9 @@ const Header1 = styled.h1`
    font-size: ${props => props.theme.h1.fontSize}
    color: ${props => props.theme.colors.primary}
 
-  @media (max-width: ${sizes.mobileM}) {
-    font-size: 2em;
+  @media (max-width: ${sizes.laptop}) {
+    font-size: 1.9em;
   }
-
 `;
 
 export default Header1;

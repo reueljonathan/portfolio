@@ -8,8 +8,8 @@ const Header2 = styled.h2`
    font-size: ${props => props.theme.h2.fontSize}
    color: ${props => props.theme.colors.primary}
 
-  @media (max-width: ${sizes.mobileM}) {
-    font-size: 1.4em;
+  @media (max-width: ${sizes.laptop}) {
+    font-size: 1.3em;
   }
 `;
 

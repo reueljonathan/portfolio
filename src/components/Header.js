@@ -61,7 +61,7 @@ const SocialIcon = styled.svg`
 `;
 
 const Headline = styled.div`
-  padding-left: 64px;
+  padding-left: 2em;
 
   @media (max-width: ${sizes.tablet}) {
     display: flex;

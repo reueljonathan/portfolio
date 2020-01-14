@@ -25,5 +25,14 @@
    <body>
       <div id="root"></div>
       <script src="index.js"></script>
+    <script>
+      let l = window.location;
+
+      if (l.hash !== '') {
+        history.pushState(null, null, l.hash.slice(1));
+      } else {
+        history.pushState(null, null, '/about');
+      }
+    </script>
    </body>
 </html>

@@ -23,7 +23,7 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
    display: inline-block;
-   margin: 0 1em;
+   margin: 0 0 0 1em;
 
   @media (max-width: ${sizes.mobileL}) {
     margin: 0 0.5em;
@@ -67,7 +67,7 @@ const CustomNavLink = styled(NavLink)`
     left: 0;
    }
 
-  @media (max-width: ${sizes.mobileL}) {
+  @media (max-width: ${sizes.laptop}) {
     font-size: 1em;
   }
 `;
