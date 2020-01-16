@@ -70,6 +70,7 @@ function App(props){
               <Route path="/tools">
                 <SkillsContainer id="skills" />
               </Route>
+              <Redirect exact from="/" to="/about" />
             </Switch>
           </ContentContainer>
         </Root>
